@@ -17,7 +17,6 @@ function App() {
     <Grid container
           direction='column'
           alignItems='center'
-          justifyContent='center'
     >
        <EntitySelector/>
         <CounterpartSelectors/>
