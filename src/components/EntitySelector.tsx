@@ -7,7 +7,8 @@ import FormControl from '@mui/material/FormControl';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
 import Chip from '@mui/material/Chip';
 import {Typography} from "@mui/material";
-import {useState} from "react";
+import {useEffect, useState} from "react";
+import {apiRequest} from "../services/apiRequest";
 
 const ITEM_HEIGHT = 48;
 const ITEM_PADDING_TOP = 8;
@@ -46,6 +47,17 @@ function getStyles(name: string, personName: readonly string[], theme: Theme) {
 const EntitySelector = () => {
     const theme = useTheme();
     const [personName, setPersonName] = useState<string[]>([]);
+
+    const loadInit = async () => {
+        const test = await apiRequest('https://online.moysklad.ru/api/remap/1.2/entity/counterparty/', {
+            method: 'get',
+        })
+        console.log(test)
+    }
+
+    useEffect(() => {
+        loadInit()
+    }, []);
 
     const handleChange = (event: SelectChangeEvent<typeof personName>) => {
         const {
