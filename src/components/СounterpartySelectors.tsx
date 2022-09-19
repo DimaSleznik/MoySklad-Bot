@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { Theme, useTheme } from '@mui/material/styles';
-import OutlinedInput from '@mui/material/OutlinedInput';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
@@ -42,19 +41,9 @@ function getStyles(name: string, personName: readonly string[], theme: Theme) {
     };
 }
 
-const EntitySelector = () => {
+const СounterpartySelectors = () => {
     const theme = useTheme();
     const [personName, setPersonName] = useState<string[]>([]);
-
-    const loadInit = async () => {
-        const test = await apiRequest('https://online.moysklad.ru/api/remap/1.2/entity/counterparty/', {
-            method: 'get',
-        })
-    }
-
-    useEffect(() => {
-        loadInit()
-    }, []);
 
     const handleChange = (event: SelectChangeEvent<typeof personName>) => {
         const {target: { value }} = event;
@@ -66,7 +55,7 @@ const EntitySelector = () => {
     return (
         <div>
             <FormControl sx={{ m: 1, width: 300 }}>
-                <Typography>Юр. лицо</Typography>
+                <Typography variant={'body1'}>Контрагент</Typography>
                 <Select
                     value={personName}
                     onChange={handleChange}
@@ -87,4 +76,4 @@ const EntitySelector = () => {
     );
 }
 
-export default EntitySelector;
+export default СounterpartySelectors;
