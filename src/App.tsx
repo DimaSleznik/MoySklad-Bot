@@ -6,7 +6,8 @@ import EntitySelector from "./components/EntitySelector";
 function App() {
 
   useEffect(() => {
-      const telegram = window.Telegram.WebApp;
+      // @ts-ignore
+      const telegram = window?.Telegram?.WebApp;
       telegram.ready()
   },[])
 
