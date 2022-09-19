@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/MoySklad-Bot/static/css/main.073c9b0a.css",
-    "main.js": "/MoySklad-Bot/static/js/main.0c76a973.js",
+    "main.css": "/MoySklad-Bot/static/css/main.b47c7966.css",
+    "main.js": "/MoySklad-Bot/static/js/main.e325d134.js",
     "index.html": "/MoySklad-Bot/index.html",
-    "main.073c9b0a.css.map": "/MoySklad-Bot/static/css/main.073c9b0a.css.map",
-    "main.0c76a973.js.map": "/MoySklad-Bot/static/js/main.0c76a973.js.map"
+    "main.b47c7966.css.map": "/MoySklad-Bot/static/css/main.b47c7966.css.map",
+    "main.e325d134.js.map": "/MoySklad-Bot/static/js/main.e325d134.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.0c76a973.js"
+    "static/css/main.b47c7966.css",
+    "static/js/main.e325d134.js"
   ]
 }
